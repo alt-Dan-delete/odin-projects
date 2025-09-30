@@ -1,3 +1,129 @@
 body {
-    background-color: goldenrod;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: #24273a;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+button {
+    font-weight: bold;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color: #cad3f5;
+    background-color: #5b6078;
+    border: 5px solid #6e738d;
+}
+
+button:hover {
+    background-color: #6e738d;
+    border: 5px solid #8087a2;
+}
+
+button:active {
+    background-color: #363a4f;
+    border: 5px solid #363a4f;
+}
+
+.calculatorBody {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #494d64;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.numbersPad {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0;
+    padding: 10px;
+    gap: 10px;
+}
+
+
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 60px;
+    background-color: #363a4f;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    border: 5px solid #5b6078;
+}
+
+.previousNumber {
+    color: #a5adcb;
+}
+
+.currentNumber {
+    font-size: 40px;
+    color: #cad3f5;    
+}
+
+.clear,
+.deleteDigit {
+    color: #181926;
+    border: 5px solid rgb(255, 150, 150);
+    background-color: rgb(237, 135, 150);
+    font-weight: bold;
+}
+
+.clear:hover,
+.deleteDigit:hover {
+    color: #181926;
+    border: 5px solid rgb(255, 176, 176);
+    background-color: rgb(255, 155, 170);
+    font-weight: bold;
+}
+
+.clear:active,
+.deleteDigit:active {
+    border: 5px solid rgb(114, 55, 55);
+    background-color: rgb(181, 86, 100);
+    font-weight: bold;
+}
+
+.operator {
+    font-weight: bold;
+    color: #ffffff;
+    border: 5px solid rgb(159, 189, 251);
+    background-color: rgb(138, 173, 244);
+}
+
+.operator:hover {
+    font-weight: bold;
+    border: 5px solid rgb(182, 206, 255);
+    background-color: rgb(161, 191, 250);
+}
+
+.operator:active {
+    font-weight: bold;
+    border: 5px solid rgb(78, 102, 151);
+    background-color: rgb(62, 85, 132);
+}
+
+.equal {
+    color: #ffffff;
+    border: 5px solid rgb(192, 255, 171);
+    background-color: rgb(166, 218, 149);
+    font-weight: bold;
+}
+
+.equal:hover {
+    border: 5px solid rgb(214, 255, 200);
+    background-color: rgb(191, 235, 177);
+}
+
+.equal:active {
+    border: 5px solid rgb(74, 100, 66);
+    background-color: rgb(111, 151, 99);
 }
