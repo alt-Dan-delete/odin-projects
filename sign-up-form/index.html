@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODIN</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <img src="images/halie-west-25xggax4bSA-unsplash.jpg" alt="" class="backImg">
+        <div class="overlay">
+            <img src="images/odin-lined.png" alt="" class="odinLogo">
+            <h1 class="odinText">odin</h1>
+        </div>
+        <p class="credits">Photo by<a href="https://unsplash.com/@haliewestphoto">Halie West</a>on<a href="https://unsplash.com">Unsplash</a></p>
+        <div class="contents">
+            <div class="description">
+                <p>This is not a real online service! You know you need something like this in your life to help realize
+                your deepest dreams. Sign up <i>now</i> to get started.</p>
+                <p>You <i>know</i> you want to.</p>
+            </div>
+            
+            <form id="register">
+                <p>Let's do this!</p>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" name="fname" id="fname" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" name="lname" id="lname" required>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="pnumber">Phone Number</label>
+                            <input type="tel" name="pnumber" id="pnumber" required>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="pass">Password</label>
+                            <input type="password" name="pass" id="pass" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="passconf">Confirm Password</label>
+                            <input type="password" name="passconf" id="passconf" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="signup">
+                <div>
+                    <button type="submit" form="register">Create Account</button>
+                </div>
+                <div>
+                    <p>Already have an account? <span id="loginText">Log in</span></p>
+                </div>
+            </div>
+    </div>
+</body>
+
+</html>
