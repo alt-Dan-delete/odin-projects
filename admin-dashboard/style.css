@@ -1,0 +1,299 @@
+:root {
+    --right-gap: 40px;
+    --left-gap: 40px;
+    --header-bg: #24273a;
+    --text-color: #cdd6f4;
+    --sidebar-bg: #1e1e2e;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    color: var(--text-color);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(250px, 350px) 1fr;
+    grid-template-rows: 180px 1fr;
+}
+
+.sidebar {
+    grid-area: 1 / 1 / 6 / 2;
+    padding: 20px;
+    background-color: var(--sidebar-bg);
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.sidebar>ul {
+    display: grid;
+    list-style: none;
+    gap: 20px;
+}
+
+.sidebar li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.sidebarLogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.sidebarLogoSvg {
+    height: 40px;
+    fill: var(--text-color);
+}
+
+.sidebarSvg {
+    height: 25px;
+    fill: var(--text-color);
+}
+
+
+
+.content {
+    background-color: #292c3c;
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 350px);
+}
+
+.projectsCardLayout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.cardSvg {
+    padding-top: 20px;
+    height: 26px;
+    fill: var(--text-color);
+}
+
+.projectsHeader {
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.announcements {
+    padding-top: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.trendingHeader {
+    padding-top: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+}
+
+.announDivider {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 2px;
+    background-color: #303446;
+}
+
+.announCard {
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    background-color: var(--header-bg);
+    box-shadow: 2px 2px 10px var(--sidebar-bg);
+    border-radius: 10px;
+}
+
+.trendingCard {
+    margin-right: 20px;
+    background-color: var(--header-bg);
+    box-shadow: 2px 2px 10px var(--sidebar-bg);
+    border-radius: 10px;
+}
+
+.trendingItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px;
+}
+
+h5,
+.trendingItem p {
+    font-size: 14px;
+}
+
+.trendingItem img {
+    width: 40px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.projectsCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    min-height: 200px;
+    border-left: 8px solid #7f849c;
+    background-color: var(--header-bg);
+    box-shadow: 2px 2px 10px var(--sidebar-bg);
+    border-radius: 10px;
+}
+
+.projectsCard .cardButtons {
+    display: flex;
+    gap: 16px;
+    justify-content: right;
+}
+
+.header {
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(80px 1fr) minmax(80px 1fr);
+}
+
+.headerSearch {
+    padding-left: var(--left-gap);
+    padding-right: var(--right-gap);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: var(--header-bg);
+    gap: 20px;
+}
+
+.headerSearch div {
+    display: flex;
+    width: 100%;
+}
+
+.headerSearch form {
+    display: flex;
+    width: 90%;
+}
+
+.headerSearch input[type="text"] {
+    padding-left: 20px;
+    margin-right: 20px;
+    flex: 1;
+    height: 36px;
+    min-width: 250px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--sidebar-bg);
+}
+
+
+.headerSearchSvg {
+    height: 26px;
+    fill: var(--text-color);
+}
+
+.headerAccount {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--header-bg);
+    gap: 30px;
+    padding-right: var(--right-gap);
+}
+
+.headerAccount svg {
+    height: 26px;
+    fill: var(--text-color);
+}
+
+.headerAccount img {
+    width: 36px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.headerWelcome {
+    display: flex;
+    align-items: center;
+    background-color: var(--header-bg);
+    font-size: 14px;
+    gap: 20px;
+    padding-left: var(--left-gap);
+}
+
+.headerWelcome img {
+    height: 60px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.headerButtons {
+    padding-inline: 20px;
+    padding-right: var(--right-gap);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+    background-color: var(--header-bg);
+}
+
+.headerButtons button {
+    flex: 1;
+    border: none;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: #5b6078;
+    height: 40px;
+    min-width: 80px;
+    max-width: 120px;
+    border-radius: 20px;
+}
+
+.sidebar li:hover {
+    color: white;
+
+    svg {
+        fill: white;
+    }
+}
+
+button:hover {
+    outline: 4px solid #6e7387;
+}
+
+img:hover {
+    outline: 4px solid #6e7387;
+}
+
+.headerSearchSvg:hover,
+.headerAccount svg:hover,
+.cardButtons svg:hover {
+    fill: white;
+}
+
+.headerSearch input[type="text"]:focus {
+    border: none;
+    outline: 4px solid #6e7387;
+}
