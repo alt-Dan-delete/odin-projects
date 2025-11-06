@@ -117,7 +117,7 @@ function createReadElement(bookItem, book) {
 
 function createEditIcon(book) {
   const editIcon = document.createElement('img');
-  editIcon.src = '/icons/edit.svg'
+  editIcon.src = './icons/edit.svg'
   editIcon.setAttribute('class', 'edit-icon');
   editIcon.addEventListener('click', () => {
     fillOutEditForm(book);
