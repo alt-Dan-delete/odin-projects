@@ -1,0 +1,298 @@
+:root {        
+    --bg-color-dark: rgb(40, 40, 40);
+    --bg-color-dark-bg: rgb(30, 30, 30);
+    --bg-color-light: rgb(250, 250, 250);
+    --bg-color-light-bg: rgb(240, 240, 240);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+header {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 900px;
+    max-width: 90vw;
+
+    input {
+        outline: none;
+        height: 30px;
+        border: none;
+    }
+
+    button {
+        border: none;
+        height: 40px;
+        width: fit-content;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-transform: uppercase;
+    }
+
+    button:hover {
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+.search-svg {
+    padding-left: 40px;
+    background: url('./assets/icons/search.svg') no-repeat;
+    background-position: 10px center;
+    background-size: 20px;
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#errorMsg {
+    color: white;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgb(220, 50, 50);
+    border-radius: 10px;
+    button {
+        color: white;
+        font-weight: 900;
+        width: 30px;
+        height: 30px;
+        margin-left: 20px;
+        background-color: rgb(180, 0, 0);
+        border: none;
+        border-radius: 5px;
+    }
+    button:hover {
+        cursor: pointer;
+        background-color: rgb(255, 90, 90);
+        outline: 2px solid rgb(255, 90, 90);
+    }
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#head {
+    margin-top: 40px;
+    width: 900px;
+    max-width: 90vw;
+    justify-content: center;
+}
+
+#head>h1 {
+    font-size: 40px;
+}
+
+#head>h2 {
+    font-size: 20px;
+    color: rgb(150, 150, 150);
+    font-weight: 300;
+}
+
+#head>div>div>div>h2 {
+    color: rgb(150, 150, 150);
+    font-weight: 300;
+}
+
+
+#head>div {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    div {
+        flex-wrap: wrap;
+    }
+}
+
+#stats {
+    width: 900px;
+    max-width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#card {
+    display: flex;
+    gap: 20px;
+    width: 180px;
+    border-radius: 10px;
+    padding: 10px;
+    img {
+        height: 60px;
+    }
+    div>h3 {
+        font-size: 16px;
+        padding-top: 10px;
+        font-weight: 900;
+    }
+    div>p {
+        text-transform: capitalize;
+    }
+}
+
+.tempconditions {
+    display: flex;
+    h1 {
+        font-size: 100px;
+    }
+    p {
+        width: fit-content;
+        font-size: 20px;
+    }
+    img {
+        width: 200px;
+    }
+}
+
+.minmaxtemp {
+    margin-right: 20px;
+    div,
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.minmaxtemp>div {
+    img {
+        height: 50px;
+        width: 50px;
+    }
+    p {
+        font-size: 40px;
+    }
+}
+
+
+#themeToggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+
+    input {
+        display: none;
+    }
+
+    label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        width: 140px;
+        height: 30px;
+        background-color: #ccc;
+        border-radius: 10px;
+        position: relative;
+        transition: background-color 0.3s;
+    }
+}
+
+#themeToggle label::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: 'LIGHT';
+    font-size: 14px;
+    width: 74px;
+    height: 26px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transition: transform 0.3s;
+    transform: translateY(-50%);
+
+}
+
+#themeToggle input:checked+label {
+    background-color: rgb(100, 100, 100);
+}
+
+#themeToggle input:checked+label::after {
+    content: 'DARK';
+    background-color: var(--bg-color-dark);
+    color: white;
+    transform: translate(60px, -50%);
+}
+
+body.dark {
+    background-color: var(--bg-color-dark);
+
+    * {
+        color: white;
+    }
+
+    #themeToggle {
+        label:hover {
+            background-color: rgb(200, 200, 200);
+        }
+    }
+
+    .search-svg {
+        background-color: rgb(100, 100, 100);
+    }
+
+    .search-svg:hover {
+        background-color: rgb(120, 120, 120);
+        outline: 2px solid rgb(140, 140, 140);
+    }
+
+    header {
+        button {
+            background-color: var(--bg-color-dark-bg);
+        }
+        button:hover {
+            outline: 2px solid rgb(120, 120, 120);
+        }
+    }
+}
+
+body.light {
+    background-color: var(--bg-color-light);
+
+    * {
+        color: rgb(40, 40, 40);
+    }
+
+    #themeToggle {
+        label:hover {
+            background-color: rgb(120, 120, 120);
+        }
+    }
+
+    .search-svg {
+        background-color: rgb(230, 230, 230);
+    }
+
+    .search-svg:hover {
+        background-color: rgb(255, 255, 255);
+        outline: 2px solid rgb(255, 255, 255);
+    }
+
+    header {
+        button {
+            background-color: var(--bg-color-light-bg)
+        }
+        button:hover {
+            outline: 2px solid #ccc;
+        }
+    }
+}
